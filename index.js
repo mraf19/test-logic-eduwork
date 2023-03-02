@@ -26,7 +26,7 @@ console.log(reveseString("Kamu sangat Cantik"));
 let a = 7
 let b = 3
   
-//[a, b] = [b, a]
+[a, b] = [b, a]
 
 //console.log(a)
 
@@ -127,19 +127,20 @@ console.log(checkNumber("8.39729gsjg77"))
 // Number 5
 
 function printNumber(n){
+  n = String(n)
   const number = ["","satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"]
   if(n.length === 1){
     return number[n]
   }
   if(n.length === 2){
-    if(n[0] === 1){
-       return n[1] === 1 ? "sebelas" : `${number[n[1]]} belas`
+    if(n[0] === "1"){
+       return n[1] === "1" ? "sebelas" : `${number[n[1]]} belas`
     } else {
       return `${number[n[0]]} puluh ${number[n[1]]}`
     }
   }
   if(n.length > 2){
-    return n === 100 ? "seratus" : "masukkan bilangan 1 - 100"
+    return n === "100" ? "seratus" : "masukkan bilangan 1 - 100"
   }
 }
 console.log(printNumber(2));
@@ -148,3 +149,7 @@ console.log(printNumber(11));
 console.log(printNumber(71));
 console.log(printNumber(102));
 console.log(printNumber(100));
+
+let z = 12
+
+console.log(z.length)
